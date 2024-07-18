@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -12,6 +13,7 @@ import {
   StatusBar,
   StyleSheet,
   useColorScheme,
+  Platform,
 } from 'react-native';
 
 import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
@@ -26,6 +28,7 @@ import {
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+  const publisher = Platform.OS === 'android' ? 'atime-android' : 'atime-ios';
 
   const page = useMemo(
     () => Taboola.getClassicPage('https://atime.live/articles?=206', 'article'),
