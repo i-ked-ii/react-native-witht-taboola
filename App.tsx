@@ -22,6 +22,7 @@ import {
   useNodeRef,
   useGetPageId,
 } from '@taboola/react-native-plugin-3x';
+// import RNTaboolaView from '@taboola/react-native-taboola';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
