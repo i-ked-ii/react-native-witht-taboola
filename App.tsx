@@ -29,9 +29,9 @@ import {
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
   const publisher = Platform.OS === 'android' ? 'atime-android' : 'atime-ios';
-
+  Taboola.init(publisher);
   const page = useMemo(
-    () => Taboola.getClassicPage('https://atime.live/articles?=206', 'article'),
+    () => Taboola.getClassicPage('https://atime.live/efm', 'article'),
     [],
   );
   const [pageId] = useGetPageId(page);
